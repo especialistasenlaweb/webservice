@@ -4,6 +4,8 @@ $("form").submit(function(e){
 	var n=$("#nombre").val();
 	$.ajax({
 		url:"http://rincondelaflora4.com/prueba.php",
+		crossDomain: true,
+		async: true,
 		data:{nom:n},
 		type:"post"
 	}).done(function(res){
